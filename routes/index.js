@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     const { test } = req.body;
     try {
-        const todo = await todosService.addTodo({ tets });
+        const todo = await todosService.addTodo({ test });
         res.status(201).json(todo);
     } catch (error) {
         res.status(500).json({ error });
