@@ -1,13 +1,19 @@
-module.exports = {
-    apiResponse: (data, message = 'Success') => {
-      return {
-        message,
-        data
-      }
-    },
-    apiError: (error) => {
-      return {
-        data: { error: error.message }
-      }
+const apiResponse = (data, message = 'Success') => {
+  return {
+    message,
+    data
+  }
+};
+
+const apiError = error => {
+  return {
+    data: {
+      error: error.message
     }
   }
+};
+
+module.exports = {
+  apiResponse,
+  apiError
+}
