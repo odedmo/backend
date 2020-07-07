@@ -1,4 +1,4 @@
-const mongoose = require('mongoose');
+const mongoose = require('mongoose')
 
 const initDb = (config) => {
     return new Promise((resolve, reject) => {
@@ -8,13 +8,13 @@ const initDb = (config) => {
             useUnifiedTopology: true,
             useFindAndModify: false
         }).then(() => {
-            console.log('Db connected');
+            console.log('Db connected')
             resolve();
         }).catch(err => {
-            console.log('Db connection faild', err);
+            console.log('Db connection faild', err)
             reject();
         });
     });
 }
 
-module.exports = initDb;
+module.exports = initDb
