@@ -10,7 +10,7 @@ const app = express()
 middlewares(app)
 routes(app)
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 4001
 
 initDb({
     connectionString: process.env.MONGO_URI
